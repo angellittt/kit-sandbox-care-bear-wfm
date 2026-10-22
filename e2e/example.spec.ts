@@ -14,7 +14,11 @@ test("web app renders the dashboard and opens a bear's profile", async ({
   ).toBeVisible();
 
   await page.getByRole("link", { name: "Bears", exact: true }).click();
-  await page.getByRole("link", { name: "Tenderheart Bear" }).click();
+  // Wait for the hash route to switch: the overview also links each bear.
+  await expect(page.getByRole("heading", { name: "Bears" })).toBeVisible();
+  await page
+    .getByRole("link", { name: "Tenderheart Bear", exact: true })
+    .click();
   await expect(
     page.getByRole("heading", { name: "Tenderheart Bear" }),
   ).toBeVisible();
