@@ -3,7 +3,7 @@
 # Design system
 
 **Cumulus is the source of truth; shadcn is the scaffolding.** The look
-comes from the design system (link pending — the designer creates it with `/ds-setup design`): brand rules, the Tailwind
+comes from the design system (https://claude.ai/artifact/E1gfFWs3TKCtUnxHQbcaTN): brand rules, the Tailwind
 names to build with ("Using in code"), and every component's docs and preview.
 If a component renders differently from its preview, fix the port — don't adjust
 the CSS to taste. Deviations go to the tracker: https://app.clickup.com/8593845/v/l/li/901115605177.

@@ -1,15 +1,15 @@
 {
-  "setup": "awaiting-design",
   "schema": "ttt-ds/1",
   "profile": "shadcn",
   "framework": "vite",
   "namespace": "Cumulus",
+  "designSystem": "https://claude.ai/artifact/E1gfFWs3TKCtUnxHQbcaTN",
   "kitVersion": "0.28.21",
   "tracker": "https://app.clickup.com/8593845/v/l/li/901115605177",
   "tokensIn": ".ttt/tokens.json",
   "systemIn": ".ttt/system.md",
   "tokensOut": "src/styles/ds-tokens.css",
-  "lastSynced": "2026-10-22T20:20:16Z",
+  "lastSynced": "2026-10-22T21:58:16Z",
   "typeClassPrefix": "type-",
   "bundleExtras": {
     "sonner": [

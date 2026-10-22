@@ -23,22 +23,12 @@
  * with a class on <html>.)
  */
 
-/* A family with a package, e.g.:
-@import "@fontsource-variable/{{PACKAGE}}";
-*/
-
-/* A family without one — one per font file, e.g.:
-@font-face {
-  font-family: "{{FAMILY}}";
-  src: url("../assets/fonts/{{FILE}}") format("woff2");
-  font-weight: {{WEIGHT_RANGE}};
-  font-style: {{STYLE}};
-  font-display: swap;
-}
-*/
+@import "@fontsource-variable/fredoka";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
 
 :root {
-  /* Only the families that load a face, e.g.:
-  --font-sans: "{{SANS_FAMILY}}";
-  */
+  --font-display: "Fredoka Variable";
+  --font-sans: "Inter Variable";
+  --font-mono: "JetBrains Mono Variable";
 }
