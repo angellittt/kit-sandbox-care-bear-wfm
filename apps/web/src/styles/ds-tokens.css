@@ -2,7 +2,7 @@
  * Source: Cumulus tokens.json v1
  * Design system: https://claude.ai/artifact/E1gfFWs3TKCtUnxHQbcaTN
  * Schema ttt-ds/1 · profile shadcn
- * Snapshot synced: 2026-10-22T21:58:16Z
+ * Snapshot synced: 2026-10-22T23:10:38Z
  *
  * Regenerate with /ds-apply tokens, or node <plugin>/kit/code/shadcn/scripts/ds-tokens.mjs
  */
@@ -10,36 +10,36 @@
 /* Primitive ramps. Never mapped to a utility and never referenced by
  * components — the semantic layer below aliases them. */
 :root {
-  --brand-primary-10: #0c1031;
-  --brand-primary-20: #1f2661;
-  --brand-primary-30: #323c93;
-  --brand-primary-40: #4552c5;
-  --brand-primary-50: #5b6cf0;
-  --brand-primary-60: #778bf3;
-  --brand-primary-70: #97a9f6;
-  --brand-primary-80: #bbc7f7;
-  --brand-primary-90: #dbe2fa;
-  --brand-primary-95: #edf0fb;
-  --brand-secondary-10: #1e2140;
-  --brand-secondary-20: #3f446f;
-  --brand-secondary-30: #616795;
-  --brand-secondary-40: #848cbc;
-  --brand-secondary-50: #a3abdd;
-  --brand-secondary-60: #b1b9ec;
-  --brand-secondary-70: #c1c9fc;
-  --brand-secondary-80: #d5dbff;
-  --brand-secondary-90: #eaedff;
-  --brand-secondary-95: #f5f7ff;
-  --brand-accent-10: #392905;
-  --brand-accent-20: #684b08;
-  --brand-accent-30: #976d0c;
-  --brand-accent-40: #c69010;
-  --brand-accent-50: #edae1d;
-  --brand-accent-60: #f0bf4c;
-  --brand-accent-70: #f4d07b;
-  --brand-accent-80: #f8e1aa;
-  --brand-accent-90: #fcf0d5;
-  --brand-accent-95: #fdf8ec;
+  --brand-primary-10: #0d0e36;
+  --brand-primary-20: #1f2069;
+  --brand-primary-30: #32329e;
+  --brand-primary-40: #4543d2;
+  --brand-primary-50: #5a5cff;
+  --brand-primary-60: #7481ff;
+  --brand-primary-70: #94a3ff;
+  --brand-primary-80: #b9c4fe;
+  --brand-primary-90: #dae0fd;
+  --brand-primary-95: #edf0fd;
+  --brand-secondary-10: #272444;
+  --brand-secondary-20: #413b74;
+  --brand-secondary-30: #5b51a2;
+  --brand-secondary-40: #7567d1;
+  --brand-secondary-50: #8b7cf6;
+  --brand-secondary-60: #9e94fe;
+  --brand-secondary-70: #b5b1ff;
+  --brand-secondary-80: #cecdff;
+  --brand-secondary-90: #e8e8ff;
+  --brand-secondary-95: #f6f6ff;
+  --brand-accent-10: #422028;
+  --brand-accent-20: #723847;
+  --brand-accent-30: #a25065;
+  --brand-accent-40: #d26884;
+  --brand-accent-50: #fa7e9f;
+  --brand-accent-60: #ff8fab;
+  --brand-accent-70: #ffaec0;
+  --brand-accent-80: #ffcdd7;
+  --brand-accent-90: #ffe8ec;
+  --brand-accent-95: #fff6f7;
   --positive-10: #0e2f1c;
   --positive-20: #195733;
   --positive-30: #257e4a;
@@ -120,20 +120,20 @@
   --backup-80: #f6b8c8;
   --backup-90: #f9dae1;
   --backup-95: #fbedf0;
-  --neutral-0: #0a0b15;
-  --neutral-5: #0f101a;
-  --neutral-10: #14151f;
+  --neutral-0: #0a0c15;
+  --neutral-5: #0f111a;
+  --neutral-10: #14161f;
   --neutral-15: #1b1d27;
   --neutral-20: #272934;
   --neutral-30: #3a3c48;
-  --neutral-40: #545663;
+  --neutral-40: #545763;
   --neutral-45: #60636f;
-  --neutral-50: #6c6f7b;
+  --neutral-50: #6c6f7c;
   --neutral-55: #7e818e;
-  --neutral-60: #9193a1;
-  --neutral-70: #acaebc;
+  --neutral-60: #9194a1;
+  --neutral-70: #abaebc;
   --neutral-80: #c6c9d7;
-  --neutral-90: #e1e4f2;
+  --neutral-90: #e0e4f2;
   --neutral-95: #f1f4ff;
   --neutral-100: #ffffff;
 }
@@ -241,14 +241,14 @@
 :root,
 [data-theme="light"] {
   --primary-normal: var(--brand-primary-50);
-  --primary-strong: var(--brand-primary-60);
+  --primary-strong: var(--brand-primary-40);
   --primary-heavy: var(--brand-primary-30);
   --primary-text: var(--brand-primary-40);
   --primary-soft: var(--brand-primary-95);
-  --on-primary: var(--neutral-0);
-  --on-secondary: var(--neutral-100);
+  --on-primary: var(--neutral-100);
+  --on-secondary: var(--brand-secondary-20);
   --on-accent: var(--neutral-10);
-  --secondary-normal: var(--brand-secondary-10);
+  --secondary-normal: var(--brand-secondary-80);
   --secondary-text: var(--brand-secondary-30);
   --secondary-soft: var(--brand-secondary-95);
   --accent-normal: var(--brand-accent-60);
@@ -302,16 +302,16 @@
 /* Dark theme. */
 [data-theme="dark"] {
   --primary-normal: var(--brand-primary-50);
-  --primary-strong: var(--brand-primary-60);
+  --primary-strong: var(--brand-primary-40);
   --primary-heavy: var(--brand-primary-70);
   --primary-text: var(--brand-primary-70);
   --primary-soft: var(--brand-primary-10);
-  --on-primary: var(--neutral-0);
-  --on-secondary: var(--neutral-100);
+  --on-primary: var(--neutral-100);
+  --on-secondary: var(--brand-secondary-20);
   --on-accent: var(--neutral-10);
-  --secondary-normal: var(--brand-secondary-10);
+  --secondary-normal: var(--brand-secondary-80);
   --secondary-text: var(--brand-secondary-70);
-  --secondary-soft: var(--brand-secondary-10);
+  --secondary-soft: var(--brand-secondary-20);
   --accent-normal: var(--brand-accent-60);
   --accent-text: var(--brand-accent-70);
   --accent-soft: var(--brand-accent-10);

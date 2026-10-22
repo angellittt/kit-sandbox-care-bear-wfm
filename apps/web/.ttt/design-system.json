@@ -9,7 +9,7 @@
   "tokensIn": ".ttt/tokens.json",
   "systemIn": ".ttt/system.md",
   "tokensOut": "src/styles/ds-tokens.css",
-  "lastSynced": "2026-10-22T21:58:16Z",
+  "lastSynced": "2026-10-22T23:10:38Z",
   "typeClassPrefix": "type-",
   "bundleExtras": {
     "sonner": [

@@ -18,18 +18,17 @@ How Cumulus is set up. The rules every TTT design system follows live in the kit
 - A `deployed` ramp for the bear status Deployed (Sky `#9CC9F5` at step 80) — the info ramp stays neutral facts.
 - A `recharging` ramp for the bear status Recharging (Lilac `#C9B6F2` at step 80) — no status ramp carries it.
 - A `backup` ramp for the bear status Needs backup (Blush `#F6B8C8` at step 80) — the negative ramp stays errors-only.
-- `on-primary` is ink (`neutral-0`) — white is 4.33:1 on Horizon; ink keeps the fill exactly Horizon (4.52:1).
-- `primary-strong` is `brand-primary-60` — a lighter hover keeps the ink label readable (6.32:1).
+- `on-primary` is white (`neutral-100`) — white labels on Vivid Horizon (4.76:1); ink read too dark on periwinkle.
+- `primary-strong` is `brand-primary-40` — a deeper hover keeps the white label readable.
+- `secondary-normal` is `brand-secondary-80` — Lavender as a light pastel fill, so secondary lifts the UI instead of weighing it down.
+- `on-secondary` is `brand-secondary-20` — dark lavender text on the pastel lavender fill.
+- `secondary-soft` (dark) is `brand-secondary-20` — a deep lavender tint keeps lavender text readable in dark mode (5.09:1).
 - Radius `soft` (1½× the TTT radii).
 - Motion `playful` (more overshoot on `ease-expressive`) — the designer's pick, over the brand pack's "never bouncing".
 - Density `comfortable` (32 / 36 / 40px controls, 12px padding).
 
 **Provisional** — inputs still standing in for the client's own, one line each, with where they came from; `/ds-change` replaces them.
 
-- `brand.primary` — extracted: Cumulus Brand Pack (Suggestions), Color table (Horizon, primary action)
-- `brand.secondary` — extracted: Cumulus Brand Pack (Suggestions), Color table (Night Sky, text / chrome)
-- `brand.accent` — kit default (placeholder `#f0bf4c`)
-- `neutralTint` — extracted: Cumulus Brand Pack (Suggestions), Color table (Cloud and Night Sky hue)
 - `fonts` — extracted: Cumulus Brand Pack (Suggestions), Typography (Fredoka, Inter, JetBrains Mono)
 - `logo` — kit default (none yet)
 - `guidelines` — extracted: Cumulus Brand Pack (Suggestions)
