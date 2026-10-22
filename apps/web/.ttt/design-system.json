@@ -1,13 +1,15 @@
 {
-  "setup": "template",
+  "setup": "awaiting-design",
   "schema": "ttt-ds/1",
   "profile": "shadcn",
   "framework": "vite",
+  "namespace": "Cumulus",
   "kitVersion": "0.28.21",
+  "tracker": "https://app.clickup.com/8593845/v/l/li/901115605177",
   "tokensIn": ".ttt/tokens.json",
   "systemIn": ".ttt/system.md",
   "tokensOut": "src/styles/ds-tokens.css",
-  "lastSynced": "2026-10-21T20:51:33Z",
+  "lastSynced": "2026-10-22T20:20:16Z",
   "typeClassPrefix": "type-",
   "bundleExtras": {
     "sonner": [
