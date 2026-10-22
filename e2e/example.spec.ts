@@ -2,17 +2,22 @@ import { expect, test } from "@playwright/test";
 import { API_URL } from "./support/utils.js";
 
 // A minimal example proving the stack is wired correctly end-to-end: the
-// web app renders and responds to a click, and the api is reachable from
-// the playwright container. Replace/expand once the app has real flows
-// worth covering.
-test("web app renders and increments the counter", async ({ page }) => {
+// web app renders and navigates, and the api is reachable from the
+// playwright container. Replace/expand once the app has real flows worth
+// covering.
+test("web app renders the dashboard and opens a bear's profile", async ({
+  page,
+}) => {
   await page.goto("/");
+  await expect(
+    page.getByRole("heading", { name: "Workforce overview" }),
+  ).toBeVisible();
 
-  const count = page.getByTestId("count");
-  await expect(count).toHaveText("0");
-
-  await page.getByRole("button", { name: "Increment" }).click();
-  await expect(count).toHaveText("1");
+  await page.getByRole("link", { name: "Bears", exact: true }).click();
+  await page.getByRole("link", { name: "Tenderheart Bear" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Tenderheart Bear" }),
+  ).toBeVisible();
 });
 
 test("api is reachable and healthy", async ({ request }) => {
