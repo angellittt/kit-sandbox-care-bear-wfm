@@ -1,0 +1,44 @@
+/* The app's fonts (Vite). App-owned: Setup seeds this file from the design
+ * system's fonts; after that it is the app's (/ds-apply adds a
+ * family the design system names). It is not a kit file, so it carries no kit
+ * version.
+ *
+ * Vite has no font loader, so the faces are declared here and the three
+ * family variables the token file reads are set on :root. The token file
+ * falls back to --font-fallback-* when a variable isn't set, so a family
+ * the design system leaves on the system stack needs no lines here.
+ *
+ * Prefer a font PACKAGE over font files in the repo: for a family Fontsource
+ * publishes, Setup adds `@fontsource-variable/<family>` (or `@fontsource/<family>`
+ * for a static one) at the version it checked, imports it here, and sets the
+ * variable to the family name the package registers (e.g. "Public Sans
+ * Variable"). Only a family with no package — a licensed or custom face — gets
+ * its files copied to src/assets/fonts/ and one @font-face per file. Imported
+ * in the global CSS right after the token file.
+ *
+ * Keep this file UNLAYERED (no @layer around it). The token file's @theme
+ * declares `--font-sans: var(--font-sans, <fallback>)` inside Tailwind's theme
+ * layer; an unlayered :root rule beats it, so the family set here wins and
+ * the fallback stack follows it. (Under Next.js, next/font does the same job
+ * with a class on <html>.)
+ */
+
+/* A family with a package, e.g.:
+@import "@fontsource-variable/{{PACKAGE}}";
+*/
+
+/* A family without one — one per font file, e.g.:
+@font-face {
+  font-family: "{{FAMILY}}";
+  src: url("../assets/fonts/{{FILE}}") format("woff2");
+  font-weight: {{WEIGHT_RANGE}};
+  font-style: {{STYLE}};
+  font-display: swap;
+}
+*/
+
+:root {
+  /* Only the families that load a face, e.g.:
+  --font-sans: "{{SANS_FAMILY}}";
+  */
+}

@@ -1,0 +1,13 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+minimumReleaseAge: 10080 # 7 days - guards against supply-chain attacks by waiting before picking up brand-new npm releases
+# Fail `pnpm install` on a Node/pnpm outside package.json "engines" (kept in
+# step with mise.toml), so a shell without mise activated gets a clear error.
+engineStrict: true
+# cdxgen (CI-only SBOM tool in packages/sbom-tools) pins exact versions of
+# undici and compression that have known High vulnerabilities. Remove these
+# once a cdxgen release pins undici >= 7.29.1 and compression >= 1.8.2.
+overrides:
+  "@cyclonedx/cdxgen>undici": 7.30.0
+  "@cyclonedx/cdxgen>compression": 1.8.2

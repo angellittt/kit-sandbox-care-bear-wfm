@@ -1,0 +1,38 @@
+{
+  "setup": "template",
+  "schema": "ttt-ds/1",
+  "profile": "shadcn",
+  "framework": "vite",
+  "kitVersion": "0.28.21",
+  "tokensIn": ".ttt/tokens.json",
+  "systemIn": ".ttt/system.md",
+  "tokensOut": "src/styles/ds-tokens.css",
+  "lastSynced": "2026-10-21T20:51:33Z",
+  "typeClassPrefix": "type-",
+  "bundleExtras": {
+    "sonner": [
+      "toast"
+    ]
+  },
+  "componentFiles": {
+    "DatePicker": [
+      "date-picker.tsx",
+      "calendar.tsx"
+    ],
+    "Input": [
+      "input.tsx",
+      "label.tsx"
+    ]
+  },
+  "contrast": {
+    "intentional": [
+      {
+        "foreground": "label-disable",
+        "reason": "disabled text is intentionally below 4.5:1 and always paired with a disabled control"
+      }
+    ]
+  },
+  "usingInCode": {
+    "notes": []
+  }
+}

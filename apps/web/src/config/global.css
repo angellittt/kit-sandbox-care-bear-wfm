@@ -1,0 +1,200 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Design-system tokens: generated from .ttt/tokens.json by the design-system-kit plugin's ds-tokens.mjs — never edit by hand. */
+@import "../styles/ds-tokens.css";
+/* The app's fonts — unlayered, after the token file, so they beat its @theme. */
+@import "../styles/fonts.css";
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  *:not(dialog) {
+    margin: 0;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  #root,
+  #__next {
+    isolation: isolate;
+  }
+
+  /* https://www.a11yproject.com/posts/how-to-hide-content/ */
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  /* design-system-kit 0.28.21 · profile shadcn · wiring: focus rule */
+  :focus-visible {
+    outline: var(--focus-ring-width, 2px) solid var(--ring);
+    outline-offset: var(--focus-ring-offset, 2px);
+  }
+}
+
+/* design-system-kit 0.28.21 · profile shadcn · wiring: theme block */
+
+/* Automatic source detection walks up from this file and can miss the
+ * source directory (or scan markdown). Declare the scan root explicitly. */
+@source "../";
+
+/* Themes key on [data-theme] (next-themes, attribute="data-theme"), not a
+ * .dark class, because that is what the generated token file emits. */
+@custom-variant dark (&:is([data-theme="dark"] *));
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* design-system-kit 0.28.21 · profile shadcn · wiring: forced colors (Windows high contrast) */
+@layer forced-colors {
+  @media (forced-colors: active) {
+    /* Selected, pressed, current and highlighted: the system's selection colours. */
+    [data-slot="tabs-trigger"][data-active],
+    [data-slot="toggle"][aria-pressed="true"],
+    [data-slot="toggle-group-item"][aria-pressed="true"],
+    [data-slot="sidebar-menu-button"][data-active],
+    [data-slot="dropdown-menu-item"][data-highlighted],
+    [data-slot="dropdown-menu-checkbox-item"][data-highlighted],
+    [data-slot="dropdown-menu-radio-item"][data-highlighted],
+    [data-slot="dropdown-menu-sub-trigger"][data-highlighted],
+    [data-slot="select-item"][data-highlighted],
+    [data-slot="combobox-item"][data-highlighted],
+    [data-slot="calendar"] [data-selected-single="true"],
+    [data-slot="calendar"] [data-range-start="true"],
+    [data-slot="calendar"] [data-range-end="true"] {
+      forced-color-adjust: none;
+      background-color: Highlight;
+      color: HighlightText;
+    }
+
+    /* Checked boxes and radios: filled with the selection colour, the tick or dot in its text colour. */
+    [data-slot="checkbox"][data-checked],
+    [data-slot="checkbox"][data-indeterminate],
+    [data-slot="radio-group-item"][data-checked] {
+      forced-color-adjust: none;
+      background-color: Highlight;
+      border-color: Highlight;
+      color: HighlightText;
+    }
+    [data-slot="radio-group-indicator"] > * {
+      forced-color-adjust: none;
+      background-color: HighlightText;
+    }
+
+    /* Switch: a track in the text colour's outline, filled when on; the thumb always visible. */
+    [data-slot="switch"] {
+      forced-color-adjust: none;
+      background-color: Canvas;
+      border: 1px solid CanvasText;
+    }
+    [data-slot="switch"][data-checked] {
+      background-color: Highlight;
+      border-color: Highlight;
+    }
+    [data-slot="switch-thumb"] {
+      forced-color-adjust: none;
+      background-color: CanvasText;
+    }
+    [data-slot="switch"][data-checked] [data-slot="switch-thumb"] {
+      background-color: HighlightText;
+    }
+
+    /* Slider and Progress: the track outlined, the filled part in the selection colour. */
+    [data-slot="slider-track"],
+    [data-slot="progress-track"] {
+      forced-color-adjust: none;
+      background-color: Canvas;
+      outline: 1px solid CanvasText;
+    }
+    [data-slot="slider-range"],
+    [data-slot="progress-indicator"] {
+      forced-color-adjust: none;
+      background-color: Highlight;
+    }
+    [data-slot="slider-thumb"] {
+      forced-color-adjust: none;
+      background-color: Canvas;
+      border: 2px solid CanvasText;
+    }
+
+    /* Dividers drawn as a filled line. */
+    [data-slot="separator"],
+    [data-slot="dropdown-menu-separator"],
+    [data-slot="select-separator"],
+    [data-slot="combobox-separator"],
+    [data-slot="sidebar-separator"] {
+      forced-color-adjust: none;
+      background-color: CanvasText;
+    }
+
+    /* A loading placeholder keeps its shape. */
+    [data-slot="skeleton"] {
+      outline: 1px dashed GrayText;
+    }
+  }
+}
